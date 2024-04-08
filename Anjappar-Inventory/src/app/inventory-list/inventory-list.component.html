@@ -1,0 +1,12 @@
+<div>
+    <input [(ngModel)]="newItemName" placeholder = "Item Name">
+    <input [(ngModel)]="newVendor" placeholder="Vendor">
+    <button (click)="addItem()">Add</button>
+</div>
+
+<ul>
+    <li *ngFor="let item of items; index as i ">
+        {{item.itemName}},{{item.vendor}}
+        <button (click)="removeItem(i)">Delete</button>
+    </li>
+</ul>
